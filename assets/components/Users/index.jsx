@@ -1,28 +1,17 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
+import { stylesUsers } from "./style";
 
-const Users = ({ navigation }) => {
+const Users = () => {
   return (
-    <View style={styles.container}>
-      <Text>2</Text>
-      <Text>There is users component</Text>
-      <Button
-        title="Go to Profile"
-        onPress={() => navigation.navigate("Profile", { name: "Profile" })}
-      />
+    <View style={stylesUsers.wrapper}>
+      <View style={stylesUsers.mainContainer}>
+        <Text>USERS</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
 
 export default Users;
